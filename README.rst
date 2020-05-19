@@ -1,5 +1,5 @@
 *******
-SFDClib
+SFDClib_alt
 *******
 
 SFDClib is a Salesforce.com Metadata API and Tooling API client built for Python 2.7, 3.3 and 3.4.

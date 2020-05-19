@@ -154,6 +154,42 @@ class SfdcMetadataApi:
 
     def retrieve(self, options):
         """ Submits retrieve request """
+        # TODO update this method to deal with packages as well
+
+        # This is what the XML looks like for packaged metadata
+        #    <soapenv:Body>
+        #         <met:retrieve>
+        #             <met:retrieveRequest>
+        #                 <met:apiVersion>48.0</met:apiVersion>
+        #                 <met:packageNames>Case Merge Premium</met:packageNames>
+        #                 <met:packageNames>SmartCOMM for Salesforce</met:packageNames>
+        #             </met:retrieveRequest>
+        #         </met:retrieve>
+        #     </soapenv:Body>
+
+        # This is what the XML looks like for unpackaged metadata
+        #    <soapenv:Body>
+        #         <met:retrieve>
+        #             <met:retrieveRequest>
+        #                 <met:unpackaged>
+        #                 <met:types>
+        #                     <met:members>FinServ__FinancialGoal__c</met:members>
+        #                     <met:members>*</met:members>
+        #                     <met:name>CustomObject</met:name>
+        #                 </met:types>
+        #                 <met:types>
+        #                     <met:members>*</met:members>
+        #                     <met:name>CustomField</met:name>
+        #                 </met:types>
+        #                     <met:types>
+        #                     <met:members>*</met:members>
+        #                     <met:name>ApexClass</met:name>
+        #                 </met:types>
+        #                 </met:unpackaged>
+        #             </met:retrieveRequest>
+        #         </met:retrieve>
+        #     </soapenv:Body>
+
         # Compose unpackaged XML
         unpackaged = ''
         for metadata_type in options['unpackaged']:
