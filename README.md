@@ -1,5 +1,8 @@
 # sfdclib
-Python library for accessing and managing Salesforce metadata and tooling API
+
+This project is a fork of rbauction/sfdclib, to include the ability to retrieve packaged metadata.
+
+SFDCLib is a Python library for accessing and managing Salesforce metadata and tooling API
 
 Documentation
 -------------

@@ -2,6 +2,8 @@
 SFDClib_alt
 *******
 
+This project is a fork of rbauction/sfdclib, to include the ability to retrieve packaged metadata.
+
 SFDClib is a Salesforce.com Metadata API and Tooling API client built for Python 2.7, 3.3 and 3.4.
 
 Usage
